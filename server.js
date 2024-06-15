@@ -21,10 +21,10 @@ app.use(morgan("dev"));
 
 
 //routes
-app.use((req, res, next) => {
-  console.log(`Request Headers:', ${req.headers['authorization']}`.bgGreen);
-  next();
-});
+// app.use((req, res, next) => {
+//   console.log(`Request Headers:', ${req.headers['authorization']}`.bgGreen);
+//   next();
+// });
 app.use("/api/v1/auth", require("./routes/authRoutes"));
 app.use("/api/v1/inventory", require("./routes/inventoryRoutes"));
 app.use("/api/v1/analytics", require("./routes/analyticsRoutes"));
